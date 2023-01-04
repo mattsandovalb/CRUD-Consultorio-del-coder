@@ -31,21 +31,23 @@
   </header>
 
   <section class="general_section">
-    <form class="general_form" method="POST" >
+    <form class="general_form" method="post"  >
       <div class="form_div">
         <div class="mb-3">
             <label for="exampleInputName" class="form-label">Name Team/Coder</label>
-            <input placeholder="Name" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
+            <input placeholder="Name" name="Name" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
         </div>
         <div class="mb-3">
             <label for="floatingTextarea2" class="mb-3">Consult</label>
-            <textarea class="form-control" placeholder="Consult" id="floatingTextarea2" style="height: 100px"></textarea>
+            <textarea class="form-control" name="Consult" placeholder="Consult" id="floatingTextarea2" style="height: 100px"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button name="submit" value="send" type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form> 
     </section>
-
+      <!-- <?php
+        require_once('./controller/quotes_controller.php');
+      ?> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </body>
