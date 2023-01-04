@@ -1,9 +1,6 @@
 <?php
-
     require_once('model/List_model.php');
-    require_once('index.php')
-
-
-
-
+    $singleList  = new List_model();
+    $matList = $singleList->getList;
+    require_once('index.php');
 ?>
