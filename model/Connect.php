@@ -1,6 +1,6 @@
 <?php
     class Connect{
-        public static function connection(){
+        public static function Connection(){
             try{
                 $connection = new PDO('mysql:host=localhost; dbname = manager', 'root', '');
                 $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
