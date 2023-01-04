@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en/es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,47 +9,41 @@
     <title>Pues no mas</title>
 </head>
 <body>
-    <header>
+  <header class="mb-5">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">Mewamatà</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Add</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="view/list.php">List</a>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-    </header>
-    <section class="general_section">
-            <form class="general_form" method="POST" >
-                <div class="form_div">
-                    <div class="mb-3">
-                        <label for="exampleInputName" class="form-label">Name Team/Coder</label>
-                        <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        
-                    </div>
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                        <label for="floatingTextarea2">Comments</label>
-                    </div>
-                    <!-- <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div> -->
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-            
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.php">Mewamatà</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.php">Add</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="view/list.php">List</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="general_section">
+    <form class="general_form" method="POST" >
+      <div class="form_div">
+        <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Name Team/Coder</label>
+            <input placeholder="Name" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
+        </div>
+        <div class="mb-3">
+            <label for="floatingTextarea2" class="mb-3">Consult</label>
+            <textarea class="form-control" placeholder="Consult" id="floatingTextarea2" style="height: 100px"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form> 
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

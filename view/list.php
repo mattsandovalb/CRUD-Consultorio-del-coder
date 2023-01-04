@@ -8,20 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-<header>
+<header class="mb-5">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">Mewamatà</a>
+    <a class="navbar-brand" href="../index.php">Mewamatà</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Add</a>
+          <a class="nav-link active" aria-current="page" href="../index.php">Add</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="view/list.php">List</a>
+          <a class="nav-link active" href="list.php">List</a>
         </li>
         
       </ul>
@@ -29,6 +29,8 @@
   </div>
 </nav>
     </header>
+
+    
     <section>
     <table class="table">
   <thead>
