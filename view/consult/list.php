@@ -2,8 +2,9 @@
     require_once("C://xampp/htdocs/Brifing_CRUD/view/head/head.php");
     require_once("C://xampp/htdocs/Brifing_CRUD/controller/consultController.php");
     $obj = new consultController();
-    $date = $obj->list($_GET['id']);
+    $lineas = $obj->list();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,44 +16,43 @@
     <title>Document</title>
 </head>
 <body>
-    
 
-
-<table class="table ">
-  <thead class="bg-primary">
+<table class="table">
+  <thead>
     <tr>
-      <th scope="col">id</th>
-      <th scope="col">Name</th>
+      <th scope="col">#</th>
+      <th scope="col">Team/Coder Name</th>
       <th scope="col">Consult</th>
-      <th scope="col">Time and Date</th>
+      <th scope="col">Date</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <?php if($lineas):?>
+        <?php foreach($lineas as $row) ?>
+        
+            <tr>
+                <th><? $row[0] ?></th>
+                <th><? $row[1] ?></th>
+                <th><? $row[2] ?></th>
+                <th><? $row[3] ?></th>
+                <th>
+                    <button class="btn btn-success"><a class="text-decoration-none text-light" href="show.php?id">View</a></button>
+                    <button class="btn btn-primary"><a class="text-decoration-none text-light" href="edit.php?id">Update</a></button>
+                    <button class="btn btn-danger "><a class="text-decoration-none text-light" href="">Delete</a></button>
+                </th>
+            </tr>
+        
+            
+
+        <?php else: ?>
+
+        <?php endif; ?>
+    
+        
+
   </tbody>
 </table>
-
+    
 </body>
 </html>
-
-
-
-
-
-

@@ -11,9 +11,13 @@
             $id = $this->model->insert($name, $consult);
             return ($id!=false) ? header("Location:list.php?id=".$id) :header("Location:create.php");
         }
-        public function list($id)
+        public function show($id)
         {
-            return ($this->model->list($id) != false) ? $this->model->list($id) : header(("Location:index.php"));
+            return ($this->model->show($id) != false) ? $this->model->show($id) : header(("Location:index.php"));
+        }
+        public function list()
+        {
+            return ($this->model->list()) ? $this->model->list() : false;
         }
     }
 ?>

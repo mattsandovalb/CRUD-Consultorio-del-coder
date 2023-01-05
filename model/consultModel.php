@@ -15,11 +15,16 @@
             $stament->bindParam(":Consult", $consult, PDO::PARAM_STR);
             return($stament->execute()) ? $this->pdo->lastInsertId() : false;
         }
-        public function list($id)
+        public function show($id)
         {
             $stament = $this->pdo->prepare("SELECT * FROM quotes where id = :id limit 1");
             $stament->bindParam(":id", $id);
             return ($stament->execute()) ? $stament->fetch() : false ;
+        }
+        public function list()
+        {
+            $stament = $this->pdo->prepare(("SELECT * FROM quotes"));
+            return ($stament->execute()) ?$stament->fetchAll() : false;
         }
     }
 ?>
