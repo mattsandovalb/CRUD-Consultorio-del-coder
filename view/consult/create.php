@@ -12,7 +12,7 @@
   
   
   <section class="general_section">
-    <form class="general_form" method="POST" autocomplete="off" action="../../../Brifing_CRUD/view/consult/list.php" >
+    <form class="general_form" method="POST" autocomplete="off" action="../../../Brifing_CRUD/view/consult/send.php" >
       <div class="form_div">
         <div class="mb-3">
             <label for="exampleInputName" class="form-label">Name Team/Coder</label>
