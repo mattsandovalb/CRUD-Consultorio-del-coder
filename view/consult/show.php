@@ -2,7 +2,7 @@
     require_once("C://xampp/htdocs/Brifing_CRUD/view/head/head.php");
     require_once("C://xampp/htdocs/Brifing_CRUD/controller/consultController.php");
     $obj = new consultController();
-    $date = $obj->list($_GET['id']);
+    $date = $obj->show($_GET['id']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +15,6 @@
     <title>Quotes List</title>
 </head>
 <body>
-    
-
-
 <table class="table container">
   <thead class="bg-primary text-align-center">
     <tr>
