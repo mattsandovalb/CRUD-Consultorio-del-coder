@@ -32,13 +32,13 @@
         </div>
         <div class="mb-3">
             <label for="floatingTextarea2" class="mb-3">Consult</label>
-            <input value="<?= $card[2]?>" required type="text"  class="form-control" name="Consult" placeholder="Consult"  style="height: 100px" >
+            <input value="<?= $card["Consult"]?>" required type="text"  class="form-control" name="Consult" placeholder="Consult"  style="height: 100px" >
         </div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Update
                       </button>
-                      <button name="submit" value="send" type="submit" class="btn btn-danger"><a class="text-decoration-none text-light" href="show.php<?= $user["Consult"]?>">Cancel</a></button>
+                      <button name="submit" value="send" type="submit" class="btn btn-danger"><a class="text-decoration-none text-light" href="show.php?id=<?=$card[0]?>">Cancel</a></button>
                       <!-- Modal -->
                       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -51,7 +51,7 @@
                             Do you want to update this query?
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-success">Update</button>
+                                <input type="submit" class="btn btn-success" value="update">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </div>
         
