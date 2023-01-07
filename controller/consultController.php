@@ -21,7 +21,7 @@
         }
         public function update($id, $name)
         {
-            return ($this->model->update( $id, $name) != false) ? header ("Location:show.php?id=".$id) : header ("Location:show.php");
+            return ($this->model->update( $id, $name) != false) ? header ("Location:show.php?id=".$id) : header ("Location:list.php");
         }
         public function delete($id, $name, $consult)
         {

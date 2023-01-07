@@ -45,7 +45,7 @@
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-danger"><a class="text-decoration-none text-light" href="delete.php?id="<?= $date[0]?>>Delete</a></button>
+                              <button type="button" class="btn btn-danger"><a class="text-decoration-none text-light" href="delete.php?id=<?= $date[0]?>">Delete</a></button>
                             </div>
                           </div>
                         </div>

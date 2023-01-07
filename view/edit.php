@@ -21,24 +21,24 @@
     <h3>Update Register</h3>
     <hr>
     <div>
-    <h5>ID: <?=$card[0]?></h5>
-    <h5>DATE: <?=$card[3]?></h5>
+    <h5>ID: <?=$card["id"]?></h5>
+    <h5>DATE: <?=$card["Date"]?></h5>
     </div>
-    <form class="general_form" method="POST" autocomplete="off" action="./update.php" >
+    <form class="general_form" method="POST" autocomplete="off" action="update.php" >
       <div class="form_div">
         <div class="mb-3">
             <label for="exampleInputName" class="form-label text-bold">Name Team/Coder</label>
-            <input required  placeholder="Name" name="name" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $card[1]?>"> 
+            <input required  placeholder="Name" name="Name" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $card["Name"]?>"> 
         </div>
         <div class="mb-3">
             <label for="floatingTextarea2" class="mb-3">Consult</label>
-            <input value="<?= $card[2]?>" required type="text"  class="form-control" name="consult" placeholder="Consult"  style="height: 100px" >
+            <input value="<?= $card[2]?>" required type="text"  class="form-control" name="Consult" placeholder="Consult"  style="height: 100px" >
         </div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Update
                       </button>
-                      <button name="submit" value="send" type="submit" class="btn btn-danger"><a class="text-decoration-none text-light" href="./list.php">Cancel</a></button>
+                      <button name="submit" value="send" type="submit" class="btn btn-danger"><a class="text-decoration-none text-light" href="show.php<?= $user["Consult"]?>">Cancel</a></button>
                       <!-- Modal -->
                       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
