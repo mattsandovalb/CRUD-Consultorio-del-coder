@@ -36,14 +36,14 @@
                   <td><?= $linea["Consult"] ?></td>
                   <td><?= $linea["Date"] ?></td>
                   <td>
-                      <button class="btn btn-primary"><a class="text-decoration-none text-light" href="../view/show.php?id=">View</a></button>
-                      <button class="btn btn-primary"><a class="text-decoration-none text-light" href="../view/edit.php?id=">Update</a></button>
+                      <button class="btn btn-primary"><a class="text-decoration-none text-light" href="show.php?id=<?= $linea[0]?>">View</a></button>
+                      <button class="btn btn-primary"><a class="text-decoration-none text-light" href="edit.php?id=<?= $linea[0]?>">Update</a></button>
                       <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#id<?=$linea[0]?>">
                         Delete
                       </button>
                       <!-- Modal -->
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal fade" id="id<?=$linea[0]?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -55,7 +55,7 @@
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-danger"><a class="text-decoration-none text-light" href="delete.php?id=">Delete</a></button>
+                              <button type="button" class="btn btn-danger"><a class="text-decoration-none text-light" href="delete.php?id=<?= $linea[0]?>">Delete</a></button>
                             </div>
                           </div>
                         </div>

@@ -16,11 +16,11 @@
       <div class="form_div">
         <div class="mb-3">
             <label for="exampleInputName" class="form-label">Name Team/Coder</label>
-            <input required  placeholder="Name" name="name" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
+            <input required  placeholder="Name" name="Name" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
         </div>
         <div class="mb-3">
             <label for="floatingTextarea2" class="mb-3">Consult</label>
-            <textarea required  class="form-control" name="consult" placeholder="Consult" id="floatingTextarea2" style="height: 100px"></textarea>
+            <textarea required  class="form-control" name="Consult" placeholder="Consult" id="floatingTextarea2" style="height: 100px"></textarea>
         </div>
         <button name="submit" value="send" type="submit" class="btn btn-primary">Save</button>
         <button name="submit" value="send" type="submit" class="btn btn-danger"><a class="text-decoration-none text-light" href="../index.php">Cancel</a></button>

@@ -28,9 +28,10 @@
         }
         public function update($id, $name)
         {
-            $stament = $this->pdo->prepare("UPDATE quotes SET Name  = :Name WHERE id = :id");
-            $stament->bindParam(":Name", $name);
+            $stament = $this->pdo->prepare("UPDATE quotes SET name  = :name WHERE id = :id");
             $stament->bindParam(":id", $id);
+            $stament->bindParam(":name", $name);
+            // $stament->bindParam(":consult", $consult);
             return ($stament->execute()) ? $id : false ;
         }
         public function delete($id)

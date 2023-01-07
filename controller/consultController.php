@@ -21,11 +21,11 @@
         }
         public function update($id, $name)
         {
-            return ($this->model->update( $id, $name) != false) ? header ("Location:list.php?id=".$id) : header ("Location:list.php");
+            return ($this->model->update( $id, $name) != false) ? header ("Location:show.php?id=".$id) : header ("Location:show.php");
         }
-        public function delete($id)
+        public function delete($id, $name, $consult)
         {
-            return ($this->model->delete($id)) ? header("Location:list.php") : header ("Location:show.php?id=".$id) ;
+            return ($this->model->delete($id, $name, $consult)) ? header("Location:list.php") : header ("Location:show.php?id=".$id) ;
         }
     }
 ?>
