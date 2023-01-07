@@ -22,7 +22,7 @@
               <a class="nav-link active" aria-current="page" href="../../../Brifing_CRUD/index.php">Add</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="../../../Brifing_CRUD/view/consult/list.php">List</a>
+              <a class="nav-link active" href="../../../Brifing_CRUD/view/list.php">List</a>
             </li>
           </ul>
         </div>

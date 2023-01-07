@@ -1,5 +1,5 @@
 <?php
-    require_once("C://xampp/htdocs/Brifing_CRUD/view/head/head.php");
+    require_once("c://xampp/htdocs/Brifing_CRUD/view/head.php");
     require_once("C://xampp/htdocs/Brifing_CRUD/controller/consultController.php");
     $obj = new consultController();
     $lineas = $obj->list();
@@ -36,7 +36,8 @@
                   <td><?= $linea["Consult"] ?></td>
                   <td><?= $linea["Date"] ?></td>
                   <td>
-                      <button class="btn btn-primary"><a class="text-decoration-none text-light" href="edit.php?id">Update</a></button>
+                      <button class="btn btn-primary"><a class="text-decoration-none text-light" href="../view/show.php?id=">View</a></button>
+                      <button class="btn btn-primary"><a class="text-decoration-none text-light" href="../view/edit.php?id=">Update</a></button>
                       <!-- Button trigger modal -->
                       <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Delete
@@ -54,7 +55,7 @@
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-danger">Delete</button>
+                              <button type="button" class="btn btn-danger"><a class="text-decoration-none text-light" href="delete.php?id=">Delete</a></button>
                             </div>
                           </div>
                         </div>
@@ -62,6 +63,10 @@
                   </td>
               </tr>
     <?php endforeach ?>
+    <?php else: ?>
+      <tr>
+        <td colspan="3" class="text-center">There are no pending inquiries</td>
+      </tr>
     <?php endif; ?>
   </tbody>
 </table>

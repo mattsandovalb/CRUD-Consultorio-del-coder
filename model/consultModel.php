@@ -26,5 +26,18 @@
             $stament = $this->pdo->prepare(("SELECT * FROM quotes"));
             return ($stament->execute()) ?$stament->fetchAll() : false;
         }
+        public function update($id, $name)
+        {
+            $stament = $this->pdo->prepare("UPDATE quotes SET Name  = :Name WHERE id = :id");
+            $stament->bindParam(":Name", $name);
+            $stament->bindParam(":id", $id);
+            return ($stament->execute()) ? $id : false ;
+        }
+        public function delete($id)
+        {
+            $stament = $this->pdo->prepare("DELETE FROM quotes WHERE id = :id");
+            $stament->bindParam(":id", $id);
+            return ($stament->execute()) ? true : false ;
+        }
     }
 ?>

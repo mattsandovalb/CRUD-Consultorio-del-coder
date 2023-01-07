@@ -19,5 +19,13 @@
         {
             return ($this->model->list()) ? $this->model->list() : false;
         }
+        public function update($id, $name)
+        {
+            return ($this->model->update( $id, $name) != false) ? header ("Location:list.php?id=".$id) : header ("Location:list.php");
+        }
+        public function delete($id)
+        {
+            return ($this->model->delete($id)) ? header("Location:list.php") : header ("Location:show.php?id=".$id) ;
+        }
     }
 ?>

@@ -1,7 +1,7 @@
 <?php
-  require_once('./view/head/head.php')
+  require_once('./view/head.php')
 ?>
 
 <?php
-  require_once('./view/consult/create.php')
+  require_once('./view/create.php')
 ?>

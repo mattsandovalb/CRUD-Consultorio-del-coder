@@ -12,7 +12,7 @@
   
   
   <section class="general_section">
-    <form class="general_form" method="POST" autocomplete="off" action="../../../Brifing_CRUD/view/consult/send.php" >
+    <form class="general_form" method="POST" autocomplete="off" action="../../Brifing_CRUD/view/send.php" >
       <div class="form_div">
         <div class="mb-3">
             <label for="exampleInputName" class="form-label">Name Team/Coder</label>
@@ -23,7 +23,7 @@
             <textarea required  class="form-control" name="consult" placeholder="Consult" id="floatingTextarea2" style="height: 100px"></textarea>
         </div>
         <button name="submit" value="send" type="submit" class="btn btn-primary">Save</button>
-        <button name="submit" value="send" type="submit" class="btn btn-danger"><a class="text-decoration-none text-light" href="../../../Brifing_CRUD/index.php">Cancel</a></button>
+        <button name="submit" value="send" type="submit" class="btn btn-danger"><a class="text-decoration-none text-light" href="../index.php">Cancel</a></button>
       </div>
     </form> 
     </section>

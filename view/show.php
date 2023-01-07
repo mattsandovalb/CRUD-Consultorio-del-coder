@@ -1,5 +1,5 @@
 <?php
-    require_once("C://xampp/htdocs/Brifing_CRUD/view/head/head.php");
+    require_once("C://xampp/htdocs/Brifing_CRUD/view/head.php");
     require_once("C://xampp/htdocs/Brifing_CRUD/controller/consultController.php");
     $obj = new consultController();
     $date = $obj->show($_GET['id']);
