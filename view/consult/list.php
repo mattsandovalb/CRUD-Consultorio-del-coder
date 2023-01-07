@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -30,14 +31,34 @@
         <?php 
             foreach($lineas as $linea): ?>
               <tr> 
-                  <td><?= $linea["id"] ?></td>
+                  <td class="bg-secondary"><?= $linea["id"] ?></td>
                   <td><?= $linea["Name"] ?></td>
                   <td><?= $linea["Consult"] ?></td>
                   <td><?= $linea["Date"] ?></td>
                   <td>
-                      <button class="btn btn-success"><a class="text-decoration-none text-light" href="show.php?id">View</a></button>
                       <button class="btn btn-primary"><a class="text-decoration-none text-light" href="edit.php?id">Update</a></button>
-                      <button class="btn btn-danger "><a class="text-decoration-none text-light" href="">Delete</a></button>
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Delete
+                      </button>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Consult</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Are you sure you want to delete this consult?
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-danger">Delete</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                   </td>
               </tr>
     <?php endforeach ?>
