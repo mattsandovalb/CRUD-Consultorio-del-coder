@@ -2,7 +2,7 @@
     require_once("C://xampp/htdocs/Brifing_CRUD/view/head.php");
     require_once("C://xampp/htdocs/Brifing_CRUD/controller/consultController.php");
     $obj = new consultController();
-    $card = $obj->show($_GET['id']);
+    $card = $obj->show($_GET["id"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -7,8 +7,8 @@
 
 
 <table class="table container">
-  <div class="container gap-5">
-  <a href="list.php" class="btn btn-success">Return</a>
+  <div class="container pb-3">
+  <a href="list.php" class="btn btn-secondary"><-Return</a>
   </div>
   
   <thead class="bg-primary text-align-center">

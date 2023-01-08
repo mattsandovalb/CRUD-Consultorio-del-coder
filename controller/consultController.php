@@ -19,9 +19,9 @@
         {
             return ($this->model->list()) ? $this->model->list() : false;
         }
-        public function update($id, $name, $consult, $date)
+        public function update($id, $name, $consult)
         {
-            return ($this->model->update( $id, $name, $consult, $date) != false) ? header ("Location:show.php?id=".$id) : header ("Location:list.php");
+            return ($this->model->update($id ,$name, $consult) != false) ? header("Location:show.php?id=".$id) : header("Location:list.php");
         }
         public function delete($id, $name, $consult)
         {

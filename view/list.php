@@ -15,8 +15,12 @@
     <title>Document</title>
 </head>
 <body>
+  <div class="container text-center pb-3">
+    <h2>Appointment List</h2>
+    <hr>
+  </div>
 <table class="table container border ">
-  <thead class="bg-primary">
+  <thead class="bg-info">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Team/Coder Name</th>
