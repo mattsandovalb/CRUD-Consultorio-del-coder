@@ -26,12 +26,13 @@
             $stament = $this->pdo->prepare(("SELECT * FROM quotes"));
             return ($stament->execute()) ?$stament->fetchAll() : false;
         }
-        public function update($id, $name)
+        public function update($id, $name, $consult, $date)
         {
-            $stament = $this->pdo->prepare("UPDATE quotes SET name  = :name WHERE id = :id");
+            $stament = $this->pdo->prepare("UPDATE quotes SET Name  = :Name , Consult = :Consult, Date = :Date WHERE id = :id");
+            $stament->bindParam(":Name", $name);
+            $stament->bindParam(":Consult", $consult);
+            $stament->bindParam(":Date", $date);
             $stament->bindParam(":id", $id);
-            $stament->bindParam(":name", $name);
-            //$stament->bindParam(":consult", $consult);
             return ($stament->execute()) ? $id : false ;
         }
         public function delete($id)
