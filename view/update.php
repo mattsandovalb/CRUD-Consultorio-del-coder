@@ -5,5 +5,4 @@
     $name= $_POST["Name"];;
     $consult= $_POST["Consult"];;
     $obj->update($id, $name, $consult);
-    
 ?>

@@ -1,5 +1,4 @@
 <?php
-
     class consultModel{
         private $pdo;
         public function __construct()
@@ -41,4 +40,3 @@
             return ($stament->execute()) ? true : false ;
         }
     }
-?>
