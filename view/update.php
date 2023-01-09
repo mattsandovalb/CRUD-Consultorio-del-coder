@@ -1,5 +1,9 @@
 <?php
     require_once("C://xampp/htdocs/Brifing_CRUD/controller/consultController.php");
     $obj = new consultController();
-    $obj->update($_POST['id'],$_POST['Name'], $_POST['Consult']);
+    $id = $_POST['id'];
+    $name= $_POST["Name"];;
+    $consult= $_POST["Consult"];;
+    $obj->update($id, $name, $consult);
+    
 ?>

@@ -10,14 +10,14 @@
         }
         public function insert($name, $consult)
         {
-            $stament = $this->pdo->prepare("INSERT INTO quotes (Name,Consult) VALUES( :Name,:Consult )");
+            $stament = $this->pdo->prepare("INSERT INTO quotes ( Name,Consult ) VALUES ( :Name,:Consult )");
             $stament->bindParam( ":Name", $name, PDO::PARAM_STR);
             $stament->bindParam(":Consult", $consult, PDO::PARAM_STR);
             return($stament->execute()) ? $this->pdo->lastInsertId() : false;
         }
         public function show($id)
         {
-            $stament = $this->pdo->prepare("SELECT * FROM quotes where id = :id limit 1");
+            $stament = $this->pdo->prepare("SELECT * FROM quotes WHERE id = :id limit 1");
             $stament->bindParam(":id", $id);
             return ($stament->execute()) ? $stament->fetch() : false ;
         }
@@ -28,7 +28,7 @@
         }
         public function update($id, $name, $consult)
         {
-            $stament = $this->pdo->prepare("UPDATE quotes SET Name = :Name, Consult = :Consult where id = :id");
+            $stament = $this->pdo->prepare("UPDATE quotes SET Name = :Name , Consult = :Consult WHERE id = :id");
             $stament->bindParam(":id", $id);
             $stament->bindParam(":Name", $name);
             $stament->bindParam(":Consult", $consult);
@@ -36,7 +36,7 @@
         }
         public function delete($id)
         {
-            $stament = $this->pdo->prepare("DELETE FROM quotes where id = :id");
+            $stament = $this->pdo->prepare("DELETE FROM quotes WHERE id = :id");
             $stament->bindParam(":id", $id);
             return ($stament->execute()) ? true : false ;
         }

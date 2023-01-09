@@ -24,8 +24,9 @@
     <h5>ID: <?=$card["id"]?></h5>
     <h5>DATE: <?=$card["Date"]?></h5>
     </div>
-    <form class="general_form" method="POST" autocomplete="off" action="update.php" >
+    <form class="general_form" method="POST" autocomplete="off" action="./update.php" >
       <div class="form_div">
+        <input type="hidden" name="id" value="<?= $card["id"]?>">
         <div class="mb-3">
             <label for="exampleInputName" class="form-label text-bold">Name Team/Coder</label>
             <input required  placeholder="Name" name="Name" type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $card["Name"]?>"> 
@@ -54,13 +55,9 @@
                                 <input type="submit" class="btn btn-success" value="Update">
                                 <a href="show.php?id=<?= $card[0]?>"  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
                             </div>
-        
       </div> 
-      
-      
     </form> 
     </section>
-      
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </body>

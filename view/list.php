@@ -78,6 +78,7 @@
                       </div>
                   </td>
               </tr>
+              
     <?php endforeach ?>
     <?php else: ?>
       <tr>
